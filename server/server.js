@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const _ = require('lodash');
+const cors = require('cors');
 
 // Own modules
 const mongoose = require('./db/mongoose');
@@ -14,6 +15,7 @@ var port = process.env.PORT || 3000;
 
 // MIDDLEWARES
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // ROUTES
